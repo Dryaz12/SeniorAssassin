@@ -117,7 +117,7 @@ def email():
         for current in range(0, len(seniors_array)):
 
             #To, From, Message
-            fromaddr = " " #Enter a Gmail email address in the string
+            fromaddr = "dryazanov.2022@carmelhs.org " #Enter a Gmail email address in the string
             toaddr = seniors_array[current][2]
             msg = MIMEMultipart()
             msg['From'] = fromaddr
@@ -131,7 +131,7 @@ def email():
             #SMTP Settings
             server = smtplib.SMTP('smtp.gmail.com', 587)
             server.starttls()
-            server.login(fromaddr, " " ) #Enter the password for the Gmail account in the string
+            server.login(fromaddr, "Tony2013! " ) #Enter the password for the Gmail account in the string
             text = msg.as_string()
             server.sendmail(fromaddr, toaddr, text)
             server.quit()
